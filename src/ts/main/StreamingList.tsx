@@ -58,13 +58,19 @@ const StreamingList = () => {
                       </div>
                       <div className="flex ml-5 text-xl">
                         <h2 className="font-bold">{streamer.channelName} </h2>
-                        <svg className="ml-5 mr-2 translate-1"xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="5"/><path d="M20 21a8 8 0 0 0-16 0"/></svg>
+                        <svg className="ml-5 mr-2 translate-1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="5"/><path d="M20 21a8 8 0 0 0-16 0"/></svg>
                         <h2>{streamer.concurrentUserCount}</h2>
                       </div>
                     </div>
                   </summary>
-                  <p>제목: {streamer.liveTitle}</p>
-                  <p>방송 시작: {streamer.openDate}</p>
+                  <div className="flex">
+                    {/* <img src={streamer.liveThumbnailImageUrl} /> */}
+                    <div>
+                      <p>제목: {streamer.liveTitle}</p>
+                      <p>카테고리: {streamer.liveCategory}</p>
+                      <p>방송 시작: {streamer.openDate}</p>
+                    </div>
+                  </div>
                 </details>
               </div>
             </li>
