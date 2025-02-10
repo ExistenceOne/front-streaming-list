@@ -5,8 +5,10 @@ const queryClient = new QueryClient();
 
 export default function MainContents(){
   return (
-    <QueryClientProvider client={queryClient}>
-      <StreamingList/>
-    </QueryClientProvider>
+    <>
+      <QueryClientProvider client={queryClient}>
+        <StreamingList/>
+      </QueryClientProvider>
+    </>
   );
 }
