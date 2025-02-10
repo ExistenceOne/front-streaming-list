@@ -1,15 +1,19 @@
-export interface ChzzkLive {
-  liveId: number;
-  liveTitle: string;
-  liveImageUrl: string;
-  concurrentUserCount: number;
-  openDate: string;
-  categoryType: string;
-  liveCategoryValue: string;
-  channel: {
+export interface LiveResponse {
+  data: {
+    liveId: number;
+    liveTitle: string;
+    liveThumbnailImageUrl: string;
+    concurrentUserCount: number;
+    openDate: string;
+    adult: boolean;
+    categoryType: string;
+    liveCategory: string;
+    liveCategoryValue: string;
     channelId: string;
     channelName: string;
     channelImageUrl: string;
-    verifiedMark: boolean;
+  }
+  page: {
+    next: string;
   };
 }
